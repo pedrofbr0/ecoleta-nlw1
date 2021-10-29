@@ -1,0 +1,58 @@
+{% extends "layout.html" %} <!--Isso faz com que a págine index herde tudo da página layout-->
+
+{% set pageId = "page-home" %}
+    <title>Ecoleta</title>
+
+{% block styles %} 
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">  
+{% endblock styles %}
+  
+{% block content %}
+
+    <div class="content"> <!--classifiquei a div com uma class content e uma classe red-->
+
+        <header>
+            <!-- <h3 class="red">Ecoleta</h3> -->
+            <img src="/assets/icones/logo.svg" alt="Logomarca">
+            <!-- <a href="/create-point.html"> -->
+                <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta
+                </a>
+        </header>
+
+        <main>
+            <!-- <h1 class="red">Seu marketplace de coleta de resíduos</h1> -->
+            <!-- <h1>Seu marketplace de coleta de resíduos</h1> -->
+            <h1>{{title}}</h1>
+
+            <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
+            
+            <!-- <button>Pesquisar pontos de coleta</button> -->
+            <a href="#">
+                <span></span>
+                <!-- Pesquisar pontos de coleta -->
+                <strong>Pesquisar pontos de coleta</strong>
+
+            </a>
+        </main>
+
+    </div>
+
+{% endblock content %}
+    <!--
+        A tag <style></style> é utilizada para alterar os elementos do html
+        É mais organizado utilizar um link à uma página css contendo os comandos de style
+    -->
+ {# <div id="page-home"> <!-- #page-home --> #}
+
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/scripts/index.js"></script>
+{% endblock scripts %}
+
+ 

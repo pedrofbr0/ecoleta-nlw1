@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+    <title>Criar ponto de coleta</title>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
+
+</head>
+<body>
+
+    <div id="page-create-point"> <!-- #page-create-point-->
+
+            <header>
+                <!-- <h3 class="red">Ecoleta</h3> -->
+                <img src="/extras-aula-1/icones/logo.svg" alt="Ecoleta">
+                <a href="/index.html">
+                    <span></span>
+                    Voltar para home
+                    </a>
+            </header>
+
+            <form action="">
+                <h1>
+                    Cadastro do ponto de coleta
+                </h1>
+
+                <fieldset>
+                    <legend>
+                        <h1>Dados da entidade</h1>
+                    </legend>
+
+                    <div class="field">
+                        <label for="name">Nome da Entidade</label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address" required>
+                        </div>
+                        <div class="field">
+                            <label for="address2">Número/Complemento</label>
+                            <input type="number" name="address2" required>
+                        </div>
+                        <label for=""></label>
+                    </div>
+                    
+                    <!--Acrescentar o atributo requiered nas tags de input e select faz com seja necessário
+                    eles estarem preenchidos para o formulário por ser enviado-->
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="state">Estado</label>
+                            <select name="uf" required>
+                                <option value="">Selecione o Estado</option>
+                            </select>
+                            <input type="hidden" name="state" >
+                        </div>
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <select name="city" disabled required> 
+                                <option value="">Selecione a Cidade</option>
+                            </select>
+                        </div>
+
+                        <label for=""></label>
+                    </div>
+
+
+
+                </fieldset>
+                    <legend>
+                        <h2>Itens de coleta</h2>
+                    </legend>
+
+                    <div class="items-grid">
+
+                        <li data-id="1"> <!--Ao invés de ser utilizar o atributo id normal
+                        utiliza-se o data-"set", no caso id, para permitir outros dados-->
+                        <!--a tag li é referente à lista, e atribui uma "bullet" ao conteúdo-->
+                            <img src="/extras-aula-1/icones/lampadas.svg" alt="Lâmpadas">
+                            <span>Lâmpadas</span>
+
+                        </li>
+
+                        <li data-id="2"> 
+                            
+                            <img src="/extras-aula-1/icones/baterias.svg" alt="Pilhas e Baterias">
+                            <span>Pilhas e Baterias</span>
+    
+                        </li>
+                        <li data-id="3"> 
+                            
+                            <img src="/extras-aula-1/icones/papeis-papelao.svg" alt="Papéis e Papelão">
+                            <span>Papéis e Papelão</span>
+    
+                        </li>
+                        <li data-id="4"> 
+                            
+                            <img src="/extras-aula-1/icones/eletronicos.svg" alt="Resíduos Eletrônicos">
+                            <span>Resíduos Eletrônicos</span>
+    
+                        </li>
+                        <li data-id="5"> 
+                            
+                            <img src="/extras-aula-1/icones/organicos.svg" alt="Resíduos Orgânicos">
+                            <span>Resíduos Orgânicos</span>
+    
+                        </li>
+                        <li data-id="6"> 
+                            
+                            <img src="/extras-aula-1/icones/oleo.svg" alt="Óleo de Cozinha">
+                            <span>Óleo de Cozinha</span>
+
+                    </div>
+
+                    <input type="hidden" name="items"> <!--Vou usar este input escondido para passar as
+                    informações dos itens selecionados para o backend-->
+
+                <fieldset>
+
+
+
+                </fieldset>
+
+                <button type="submit">Cadastrar ponto de coleta</button>
+
+            </form>
+
+    </div>
+
+    <script src="/scripts/create-point.js">
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* :root referencia*/
+
+:root{ /*posso criar variáveis para valores a serem replicadas em todo html*/
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+
+* { /*seletor de todos os elemntos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*atribuindo border-box à box sizing,
+o border e o padding passam a estar inclusos nas dimensões finais do box*/
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialiased; 
+}
+
+a {
+    text-decoration: none; /*remove o underline de todos as tags "a"*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Ubuntu, sans-serif; /*não precisa usar aspas simples, desde que a familía de fontes tenha um só nome*/
+    color: var(--title-color);
+
+}
+
+/* BOX MODEL 
+É uma boa prática trabalhar com os elementos do html em forma
+de "caixas", containers, por exemplo, colocando dentro de divs
+
+Box do tipo block ocupam a linha inteira, enquanto que elementos
+do tipo inline apenas circunscrevem o texto
+*/
+
+/* Para definir um classe, usa-se o "." antes do nome da mesma*/
+
+/* Para definir uma ID, usa-se o "#" antes do nome da mesma

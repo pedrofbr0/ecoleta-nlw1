@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-search-results" %}
+
+{% block title %}
+    <title>Resultados da pesquisa</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+
+    <main>
+
+        {# Caso não houvesse pontos cadastrados,
+        O conteúdo apresentado deveria ser outro. 
+        Para isso utilizaremos o if statement do
+        nujuncks #}
+        {# {% if condition %}
+        {% else %}
+        {% endif %} #}
+
+        {% if total > 0 %}
+
+            <h4>
+                {# <strong>2 pontos</strong>
+                encontrados #}
+                <strong>{{total}}
+                    pontos</strong>
+                encontrados
+            </h4>
+
+            <div class="cards">
+
+                {# {{places}} #}
+
+                {# Estrutura de repetição no nunjucks #}
+                {# {% for variable in iterator %}
+                {% endfor %} #}
+
+                {% for place in places %}
+
+                    <div class="card">
+
+                        <img src="{{ place.image }}" alt="{{ place.name }}">
+                        <h1>{{ place.name }}</h1>
+                        <h3>{{ place.items }}</h3>
+
+                        <p>
+                            {{ place.city }},
+                            {{ place.state }}
+                            <br>
+                            <!--Quebra de linha-->
+                            {{ place.address }}
+                            <br>
+                            {{ place.address2 }}
+                        </p>
+
+                    </div>
+
+                {% endfor %}
+
+                {# <div class="card"> Os dados aqui nao são dinâmicos
+
+                    <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="Colectoria">
+                    <h1>Colectoria</h1>
+                    <h3>Resíduos Eletrônicos, Lâmpadas</h3>
+
+                    <p>
+                        Rio do Sul, Santa Catarina
+                        <br>
+                        <!--Quebra de linha-->
+                        Guilherme Gemballa, Jardim América
+                        <br>
+                        N° 260
+                    </p>
+
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60" alt="Paperside">
+                    <h1>Papersider</h1>
+                    <h3>Papéis e Papelão</h3>
+
+                    <p>
+                        Rio do Sul, Santa Catarina
+                        <br>
+                        Guilherme Gemballa, Jardim América
+                        <br>
+                        N° 260
+                    </p>
+
+                </div>#}
+
+            </div>
+
+            {%else%}
+
+            <h4>
+                <strong>Nenhum</strong>
+                ponto encontrado
+            </h4>
+
+        {% endif %}
+
+        <!-- Unsplash: servidor de imagens-->
+
+    </main>
+{% endblock content %}
+
+{% block scripts %}{% endblock scripts %}

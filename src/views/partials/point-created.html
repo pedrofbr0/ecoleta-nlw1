@@ -1,0 +1,24 @@
+    <!--Código da página que deve aparecer  logo em seguida de se 
+    confirmar o cadastro dos pontos de coleta. 
+    Ela será no estilo "modal", ela vai só cobrir a tela anterior, 
+    janela dentro da página-->
+
+    <div id="modal" class="point" > <!--Irá ocupar a tela inteira com o "filme escuro"-->
+        <div class="content">
+
+            <img src="/assets/icones/check.svg" alt="Cadastro concluído">
+
+            <h1>Cadastro concluído</h1>
+
+        </div>
+    </div>
+
+
+    <!--Script paara fazer a tela modal de cadastro concluído automaticamente irpara a homepage depois de 2 seg-->
+    <script> 
+        
+        setTimeout( (  ) => { window.location = "/" }, 2000)
+        // a setTimeout recebe 2 argumentos: o primeiro é a funcionalidade que irá ser executada
+        // e o segundo é após quanto tempo se exectuará
+        
+    </script>

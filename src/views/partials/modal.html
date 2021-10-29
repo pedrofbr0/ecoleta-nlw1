@@ -1,0 +1,22 @@
+<!--Código da página que deve aparecer logo em seguida de se clicar em pesquisar pontos de coleta. Ela será no estilo "modal", ela vai só cobrir a tela anterior, janela dentro da página-->
+
+<div id="modal" class="hide">
+    <!--Irá ocupar a tela inteira com o "filme escuro"-->
+    <div class="content">
+        <div class="header">
+            <h1>Pontos de Coleta</h1>
+            <a href="#">Fechar</a>
+            <!--link para fechar o modal-->
+        </div>
+        <form action="/search ">
+            <!--o indica me indica o caminho seguir após execução da ação-->
+            <label for="search">Cidade</label>
+            <div class="search field">
+                <input type="text" name="search" placeholder="Pesquise por cidade">
+                <button>
+                    <img src="/assets/icones/search.svg" alt="Buscar">
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

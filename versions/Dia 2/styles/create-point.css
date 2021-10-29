@@ -1,0 +1,124 @@
+#page-create-point {
+    width: 90%px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    margin: 0 48px auto; /*minha adição*/
+
+    /*alinhamento de caixa (pelo lado de fora)*/
+}
+
+#page-create-point header {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 48px 0px 0; /*minha adição*/
+}
+
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point header a span {
+    background-image: url('../extras-aula-1/icones/arrow-left.svg');
+    width: 20px;
+    height: 24px;
+    display: flex;
+    margin-right: 16px;
+}
+
+form {
+    background-color: white;
+    padding: 64px; /*preechimento interno da caixa*/
+    border-radius: 8px;
+    margin-top: 80px;
+
+    max-width: 730px;
+
+    /*box-sizing: border-box;*/ /*atribuindo border-box à box sizing,
+o border e o padding passam a estar inclusos nas dimensões finais do box*/
+
+    margin: 80px auto;
+
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0ch;
+}
+
+form legend {
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    flex: 1;
+}
+
+form .field-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+form input, form select {
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px ;
+    border-radius: 8px;
+
+    /* outline: none; */
+}
+
+form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+      font-size: 14px;
+      margin-bottom: 8px;
+}
+
+form .field-group .field + .field { /*o sinal de + seleciona o field que tem um field anterior à ele*/
+    margin-left: 24px;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+
+    /* transition-duration: 400ms; */
+    transition: background-color 400ms;
+}
+
+form button:hover {
+    background-color: #2fb86e;
+}
